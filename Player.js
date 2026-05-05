@@ -26,7 +26,6 @@ export default class Player {
     return "Meg lettél büntetve!";
   }
 
-  // 🔥 EVENT KEZELÉS ITT
   initControls(game, ui) {
     document.addEventListener("keydown", (e) => {
       let uzenet = "";

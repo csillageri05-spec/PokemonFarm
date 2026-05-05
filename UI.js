@@ -12,7 +12,6 @@ export default class UI {
         let cell = document.createElement("div");
         cell.classList.add("cell");
 
-        
         if (player.helyzet.x === x && player.helyzet.y === y) {
           if (player.kep) {
             let img = document.createElement("img");
@@ -24,7 +23,6 @@ export default class UI {
           }
         }
 
-      
         game.termesek.forEach((t) => {
           if (t.x === x && t.y === y) {
             cell.innerText = t.tipus;
