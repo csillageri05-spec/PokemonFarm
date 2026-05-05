@@ -1,0 +1,57 @@
+# Pokemon Farm Game
+
+## Projekt leirasa
+Ez a projekt egy bongeszoben futo jatek, amely JavaScript, HTML es CSS hasznalataval keszult, objektumorientalt (OOP) szemleletben. A jatekos egy Pokemon karaktert iranyit egy farmon, ahol termest kell gyujtenie. A jatek kulonlegessege a buntetes logika: ha a jatekos bizonyos szamu lepesen keresztul nem gyujt be termest, a gazda megbunteti, ami az eletero csokkenesevel jar.
+
+## Architektura es modulok
+A projekt modularis felepitesu, ES6 modulokat (export/import) hasznal a tiszta es karbantarthato kod erdekeben.
+
+1. Player osztaly
+- Feladata a jatekos allapotanak tarolasa: nev, eletpontok, megszerzett pontok, aktualis koordinatak.
+- Kezeli a hatizsak (inventory) tartalmat.
+- Tartalmazza az esemenykezelot a billentyuzetrol erkezo mozgatasra.
+
+2. Game osztaly
+- A jatek kozponti logikajaert felel.
+- Kezeli a jatekteret, a termekek generalasat es az utkozeseket.
+- Itt fut a buntetes logika, amely figyeli a gyujtes nelkul megtett lepeseket.
+
+3. UI osztaly
+- A megjelenitesert felelos reteg.
+- Rendereli a jatekteret es folyamatosan frissiti az informacios panelt (elet, pontszam, inventory).
+
+4. Services osztaly
+- A kulso kommunikacioert felelos.
+- A Fetch API segitsegevel lekerezi a kivalasztott Pokemon adatait es kepet a PokeAPI-rol.
+
+## Jatekmenet es szabalyok
+- A jatekos a jatekteren szabadon mozoghat.
+- A termesek a palyan random helyeken jelennek meg, begyujtesukhoz ra kell lepni az adott mezore.
+- Minden begyujtott termes noveli a pontszamot.
+- Strategiai elem: Amennyiben 3 lepesig nem tortenik gyujtes, a jatekos elete csokken.
+- A jatek celja a leheto legtobb pont gyujtese, mielott az eletpontok elfogynanak.
+
+## Iranyitas
+- Fel nyil: mozgatas felfele
+- Le nyil: mozgatas lefele
+- Bal nyil: mozgatas balra
+- Jobb nyil: mozgatas jobbra
+
+## Technikai kovetelmenyek es futtatas
+A projekt modern JavaScript (ES6) modulokat hasznal, ezert a bongeszok biztonsagi korlatozasai miatt nem indithato el sima fajlmegnyitassal (index.html dupla kattintas).
+
+A futtatashoz helyi webszerver szukseges:
+- VS Code eseten: Live Server bővítmény hasznalata.
+- Terminalbol: npx serve parancs kiadasa a projekt mappajaban.
+
+## Felhasznalt technologiak
+- JavaScript (ES6 Modules)
+- HTML5 (Canvas vagy DOM alapu rendereles)
+- CSS3 (Layout es styling)
+- PokeAPI (Kulso adatforras a karakterekhez)
+
+## Tovabbfejlesztesi lehetosegek
+- Tobbbek kozott valaszthato karakterek listaja.
+- Kulonbozo palyak es nehezsegi szintek.
+- Mozgo ellensegek (a gazda szemelyesen probalja elkapni a jatekost).
+- Helyi vagy online ranglista (leaderboard) implementalasa.
